@@ -68,12 +68,9 @@ public class Toy implements Comparable<Toy> {
      */
     @Override
     public String toString() {
-        return "Toy{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", weight=" + weight +
-                '}';
+        return String.format("Игрушка [ID: %d, Название: %s, Вес: %.2f]", id, name, weight);
     }
+
 
     /**
      * Переопределение метода equals для сравнения игрушек по их ID.

@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea35682b-c281-4e8c-b745-c84cf36be7b2" name="Changes" comment="Added a description in the readme">
+    <list default="true" id="ea35682b-c281-4e8c-b745-c84cf36be7b2" name="Changes" comment="Added class ToyDraw">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Toy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToyDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToyDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToyShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToyShop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,12 +71,39 @@
       <option name="project" value="LOCAL" />
       <updated>1708539742516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added class Toy">
+      <option name="closed" value="true" />
+      <created>1708540806107</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540806107</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added class ToyShop">
+      <option name="closed" value="true" />
+      <created>1708540890971</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540890971</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added class ToyDraw">
+      <option name="closed" value="true" />
+      <created>1708540904716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540904716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create project JAVA Toy store" />
     <MESSAGE value="Added a description in the readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a description in the readme" />
+    <MESSAGE value="Added class Toy" />
+    <MESSAGE value="Added class ToyShop" />
+    <MESSAGE value="Added class ToyDraw" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added class ToyDraw" />
   </component>
 </project>

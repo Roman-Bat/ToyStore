@@ -1,6 +1,8 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -48,20 +50,26 @@ public class ToyShop {
     }
 
     /**
-     * Провести розыгрыш и вернуть список выпавших игрушек.
+     * Провести розыгрыш и вывести список выпавших игрушек в консоль.
      *
      * @param numDraws Количество игрушек для розыгрыша
-     * @return Список игрушек, выпавших в результате розыгрыша
      */
-    public List<Toy> drawToys(int numDraws) {
+    /**
+     * Провести розыгрыш и вывести список выпавших игрушек в консоль.
+     *
+     * @param numDraws Количество игрушек для розыгрыша
+     */
+    public void drawToys(int numDraws) {
         List<Toy> drawResults = new ArrayList<>();
+        System.out.println("Результаты розыгрыша:");
         for (int i = 0; i < numDraws; i++) {
             Toy drawnToy = toysQueue.poll();
             if (drawnToy != null) {
+                System.out.printf("Выпала игрушка: ID=%d, Название=%s, Вес=%.2f%n", drawnToy.getId(), drawnToy.getName(), drawnToy.getWeight());
                 drawResults.add(drawnToy);
             }
         }
-        return drawResults;
+        writeDrawResultsToFile(drawResults, "результаты_розыгрыша.txt");
     }
 
     /**
@@ -71,13 +79,27 @@ public class ToyShop {
      * @param filename    Имя файла для записи результатов
      */
     public void writeDrawResultsToFile(List<Toy> drawResults, String filename) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true))) {
+            // Записываем заголовок с текущей датой и временем
+            LocalDateTime currentTime = LocalDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            writer.write(String.format("Результаты розыгрыша (%s):\n", currentTime.format(formatter)));
+
+            // Записываем данные о каждой игрушке в файл
             for (Toy toy : drawResults) {
-                writer.write(toy.toString());
-                writer.newLine();
+                writer.write(String.format("ID: %d, Название: %s, Вес: %.2f%n", toy.getId(), toy.getName(), toy.getWeight()));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Получить очередь игрушек в магазине.
+     *
+     * @return Очередь игрушек в магазине
+     */
+    public PriorityQueue<Toy> getToysQueue() {
+        return toysQueue;
     }
 }
